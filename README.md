@@ -20,4 +20,4 @@ Use (https://reactjs.org/ React app) to connect API from server and display user
 After created an account and login, User can interact with their todolist database on (https://www.mongodb.com/ MongoDB) including: Add a todo item, toggle a todo item as finished (or unfinished), Delete a todo item and Delete whole todolist 
 
 # Deployment
-Use (https://docs.npmjs.com/cli/v6/commands/npm-build npm build) with React app and (https://www.docker.com/ Dockerize) it with /server. then push the app container to (https://dashboard.heroku.com/ Heroku). Following a guide from (https://medium.com/jaysonmulwa/deploying-a-go-fiber-go-react-app-to-heroku-using-docker-7379ed47e0fc here)
+Use npm build(https://docs.npmjs.com/cli/v6/commands/npm-build) with React app and (https://www.docker.com/ Dockerize) it with /server. then push the app container to (https://dashboard.heroku.com/ Heroku). Following a guide from (https://medium.com/jaysonmulwa/deploying-a-go-fiber-go-react-app-to-heroku-using-docker-7379ed47e0fc here)
