@@ -12,4 +12,4 @@ RUN adduser -S -D -H -h /app appuser
 USER appuser
 COPY --from=builder /build/ /app/
 WORKDIR /app
-CMD ["./goreact-todo-app"]
+CMD ["./goreactmg-todo-app"]

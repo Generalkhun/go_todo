@@ -11,7 +11,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const connectionString = "mongodb+srv://generalkhun:5p3qe26k@cluster0.m9ta1.mongodb.net/todo?retryWrites=true&w=majority"
+const connectionString = xxx // Use the connection key from MongoDB
 const dbName = "todo"
 
 //const collectionName = "todoTasks"
