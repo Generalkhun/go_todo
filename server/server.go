@@ -2,19 +2,29 @@ package main
 
 import (
 	"Generalkhun/go-todo-server/middleware"
+	"fmt"
+	"os"
 
+	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+
 	// create router
 	router := gin.Default()
+
+	// fromt end router
+	router.Use(static.Serve("/", static.LocalFile("./build", true)))
+	router.Use(static.Serve("/registerR", static.LocalFile("./build", true)))
+	router.Use(static.Serve("/loginformR", static.LocalFile("./build", true)))
+	router.Use(static.Serve("/taskR", static.LocalFile("./build", true)))
 
 	// CORS
 	router.Use(middleware.CORSMiddleware())
 
 	//home-router
-	router.GET("/", middleware.PreSignin())
+	//router.GET("/", middleware.PreSignin())
 	router.POST("/register", middleware.Register())
 
 	//auth-router
@@ -41,6 +51,17 @@ func main() {
 	}
 
 	//Run the server
-	router.Run(":8080")
+	//router.Run(":8080") ---> use when runing app locally
+	router.Run(getPort())
 
+}
+
+//Get port to deploy app (on Heroku, on this case)
+func getPort() string {
+	var port = os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		fmt.Println("No Port In Heroku" + port)
+	}
+	return ":" + port
 }

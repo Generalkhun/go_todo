@@ -85,7 +85,8 @@ func Logout() gin.HandlerFunc {
 			Path:    "/",
 			Expires: time.Now().Add(5 * time.Minute),
 		})
-		c.Redirect(http.StatusPermanentRedirect, "/")
+		c.JSON(200, gin.H{"message": "log out"})
+		//c.Redirect(http.StatusPermanentRedirect, "/")
 	}
 }
 

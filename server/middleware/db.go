@@ -11,7 +11,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const connectionString = "mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb"
+const connectionString = "mongodb+srv://generalkhun:5p3qe26k@cluster0.m9ta1.mongodb.net/todo?retryWrites=true&w=majority"
 const dbName = "todo"
 
 //const collectionName = "todoTasks"
