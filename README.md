@@ -19,5 +19,5 @@ Use [Go](https://golang.org/) with [Gin](https://github.com/gin-gonic/gin) to be
 Use [React app](https://reactjs.org/) to connect API from server and display user's todolist data. 
 After created an account and login, User can interact with their todolist database on [MongoDB](https://www.mongodb.com/) including: Add a todo item, toggle a todo item as finished (or unfinished), Delete a todo item and Delete whole todolist 
 
-# Deployment
+## Deploy
 Use [npm build](https://docs.npmjs.com/cli/v6/commands/npm-build) with React app and [Dockerize](https://www.docker.com/) it with /server. then push the app container to [Heroku](https://dashboard.heroku.com/). Following a guide from [here](https://medium.com/jaysonmulwa/deploying-a-go-fiber-go-react-app-to-heroku-using-docker-7379ed47e0fc)
